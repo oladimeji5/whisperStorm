@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSNR Traders</title>
+    <title>MSNR Traders - Forex Training</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,14 +13,14 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="whisper.png" alt="Logo">
-            <h1 class="brand">WHISPERSTORM MSNR ELITE TRADERS</h1>
+            <img src="whisper.png" alt="MSNR Traders Logo">
+            <span class="brand">MSNR TRADERS</span>
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active" onclick="showSection('dashboard', event)">Dashboard</a></li>
-                <li><a href="#" onclick="showSection('about', event)">About</a></li>
-                <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -28,11 +28,12 @@
     <!-- Sidebar -->
     <aside class="sidebar">
         <h2>MSNR Traders</h2>
-        <a href="#">📘 Live Training</a>
-        <a href="#">📊 Market Insights</a>
-        <a href="#">👥 Community</a>
-        <a href="#">🛠 Tools</a>
-        <a href="#">📞 Contact</a>
+        <a href="#training">📘 Live Training</a>
+        <a href="#insight">📊 Market Insights</a>
+        <a href="#community">👥 Community</a>
+        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank">💬 WhatsApp Group</a>
+        <a href="#tools">🛠 Tools</a>
+        <a href="#contact">📞 Contact</a>
     </aside>
 
     <!-- Main Content -->
@@ -40,37 +41,38 @@
 
         <!-- Dashboard Section -->
         <section id="dashboard" class="active">
-            <h2>Welcome to MSNR Traders Dashboard</h2>
+            <h2>Dashboard</h2>
             <div class="card-container">
 
                 <!-- Live Training -->
-                <div class="gallery-item">
+                <div class="card gallery-item" id="training">
                     <img src="pics.jpg" alt="Live Training">
                     <div class="overlay">
                         <h3>Live Training</h3>
-                        <p>Join our interactive forex trading sessions in real-time.</p>
+                        <p>Join real-time trading classes and sharpen your skills.</p>
                     </div>
-                    <h4 class="card-title">📘 Live Training</h4>
                 </div>
 
-                <!-- Market Insight -->
-                <div class="gallery-item">
-                    <img src="pics 1.jpg" alt="Market Insight">
+                <!-- Market Insights -->
+                <div class="card gallery-item" id="insight">
+                    <img src="pics 1.jpg" alt="Market Insights">
                     <div class="overlay">
-                        <h3>Market Insight</h3>
-                        <p>Daily analysis and trade setups from Elite Traders.</p>
+                        <h3>Market Insights</h3>
+                        <p>Stay updated with daily trading signals and analysis.</p>
                     </div>
-                    <h4 class="card-title">📊 Market Insight</h4>
                 </div>
 
                 <!-- Community Support -->
-                <div class="gallery-item">
+                <div class="card gallery-item" id="community">
                     <img src="pics 2.jpg" alt="Community Support">
                     <div class="overlay">
                         <h3>Community Support</h3>
                         <p>Connect, share, and learn with traders worldwide.</p>
+                        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank"
+                            class="whatsapp-btn">
+                            💬 Join WhatsApp Group
+                        </a>
                     </div>
-                    <h4 class="card-title">👥 Community Support</h4>
                 </div>
 
             </div>
@@ -78,17 +80,13 @@
 
         <!-- About Section -->
         <section id="about">
-            <h2>About MSNR Traders</h2>
+            <h2>About Us</h2>
             <p>
-                MSNR Traders is a professional online Forex training platform designed to empower traders with live
-                market
-                insights, interactive training, and a supportive trading community. Our mission is to guide beginners
-                and
-                experienced traders alike with the right knowledge, tools, and mentorship to achieve consistent success
-                in the
-                financial markets.
+                At MSNR Traders, we empower individuals with the skills and confidence to trade forex successfully.
+                Through live training, insightful market analysis, and strong community support,
+                we provide a platform for traders to grow, connect, and succeed together.
             </p>
-            <img src="whisper.png" alt="Profile">
+            <img src="about.jpg" alt="About MSNR Traders">
         </section>
 
         <!-- Contact Section -->
@@ -97,41 +95,29 @@
                 <h2>Contact Us</h2>
                 <form>
                     <div class="form-group">
-                        <label for="name">Full Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message..."
-                            required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message here..."></textarea>
                     </div>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 MSNR TRADERS. All rights reserved.</p>
+        <p>&copy; 2025 MSNR Traders. All Rights Reserved.</p>
     </footer>
 
-    <!-- Script -->
-    <script>
-        function showSection(sectionId, event) {
-            // hide all
-            document.querySelectorAll("main section").forEach(sec => sec.classList.remove("active"));
-            document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
-
-            // show clicked section
-            document.getElementById(sectionId).classList.add("active");
-            event.target.classList.add("active");
-        }
-    </script>
 </body>
 
 </html>
