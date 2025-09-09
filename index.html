@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <!-- Header -->
     <header>
         <div class="logo">
@@ -17,74 +18,80 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="active" onclick="showSection('home')">Home</a></li>
-                <li><a href="#" onclick="showSection('about')">About</a></li>
-                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="#" class="active" onclick="showSection('dashboard', event)">Dashboard</a></li>
+                <li><a href="#" onclick="showSection('about', event)">About</a></li>
+                <li><a href="#" onclick="showSection('contact', event)">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Sections -->
-    <main>
-        <!-- Home -->
-        <section id="home" class="active">
-            <div class="hero">
-                <h2>WELCOME TO WHISPERSTORM MSNR ELITE TRADERS</h2>
-                <p>Empowering students and traders with knowledge, technology, and opportunities.</p>
-            </div>
-            <div class="gallery">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>MSNR Traders</h2>
+        <a href="#">📘 Live Training</a>
+        <a href="#">📊 Market Insights</a>
+        <a href="#">👥 Community</a>
+        <a href="#">🛠 Tools</a>
+        <a href="#">📞 Contact</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="active">
+            <h2>Welcome to MSNR Traders Dashboard</h2>
+            <div class="card-container">
+
+                <!-- Live Training -->
                 <div class="gallery-item">
-                    <img src="pics.jpg" alt="Trading">
+                    <img src="pics.jpg" alt="Live Training">
                     <div class="overlay">
-                        <h3>Trading Insights</h3>
-                        <p>Stay ahead of the market with deep analysis of forex, synthetic indices, and chart patterns.
-                            We provide
-                            strategies, risk management tips, and real-world trading experiences for all levels of
-                            traders.</p>
+                        <h3>Live Training</h3>
+                        <p>Join our interactive forex trading sessions in real-time.</p>
                     </div>
+                    <h4 class="card-title">📘 Live Training</h4>
                 </div>
+
+                <!-- Market Insight -->
                 <div class="gallery-item">
-                    <img src="pics 1.jpg" alt="Tech">
+                    <img src="pics 1.jpg" alt="Market Insight">
                     <div class="overlay">
-                        <h3>Tech Events</h3>
-                        <p>Explore the intersection of technology and finance. Join our workshops, coding bootcamps, and
-                            events
-                            where innovation meets opportunity, preparing you for the digital future.</p>
+                        <h3>Market Insight</h3>
+                        <p>Daily analysis and trade setups from Elite Traders.</p>
                     </div>
+                    <h4 class="card-title">📊 Market Insight</h4>
                 </div>
+
+                <!-- Community Support -->
                 <div class="gallery-item">
-                    <img src="pics 2.jpg" alt="Community">
+                    <img src="pics 2.jpg" alt="Community Support">
                     <div class="overlay">
                         <h3>Community Support</h3>
-                        <p>We are stronger together. Our community focuses on mentorship, networking, welfare, and
-                            peer-to-peer
-                            support—ensuring no one is left behind in their academic, trading, or personal journey.</p>
+                        <p>Connect, share, and learn with traders worldwide.</p>
                     </div>
+                    <h4 class="card-title">👥 Community Support</h4>
                 </div>
+
             </div>
         </section>
 
-        <!-- About -->
+        <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
+            <h2>About MSNR Traders</h2>
             <p>
-                My name is <b>Abigbinde Daud Oladimeji</b>, a computer science student passionate about learning,
-                coordination,
-                and self-development.
-                I’m highly organized, composed, and creative, with interests in education, technology, trading,
-                cybersecurity,
-                writing, and storytelling.
+                MSNR Traders is a professional online Forex training platform designed to empower traders with live
+                market
+                insights, interactive training, and a supportive trading community. Our mission is to guide beginners
+                and
+                experienced traders alike with the right knowledge, tools, and mentorship to achieve consistent success
+                in the
+                financial markets.
             </p>
-            <p>
-                I also run a wristwatch collection brand called <b>Alpha Digital Sales</b>. Beyond academics and
-                business, I’m
-                deeply involved in student welfare and community building, inspiring others to achieve their goals while
-                growing together.
-            </p>
-            <img src="Snap.jpg" alt="Profile">
+            <img src="whisper.png" alt="Profile">
         </section>
 
-        <!-- Contact -->
+        <!-- Contact Section -->
         <section id="contact">
             <div class="contact">
                 <h2>Contact Us</h2>
@@ -113,9 +120,9 @@
         <p>&copy; 2025 MSNR TRADERS. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Script -->
     <script>
-        function showSection(sectionId) {
+        function showSection(sectionId, event) {
             // hide all
             document.querySelectorAll("main section").forEach(sec => sec.classList.remove("active"));
             document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
