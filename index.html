@@ -120,14 +120,14 @@
     <script>
         const sidebar = document.querySelector(".sidebar");
 
-        // Expand when cursor touches left edge
+        // Expand when mouse nears left edge
         document.addEventListener("mousemove", (e) => {
-            if (e.clientX < 20) {
+            if (e.clientX < 25) {  // detect near left edge
                 sidebar.classList.add("expanded");
             }
         });
 
-        // Hide again when mouse leaves sidebar
+        // Collapse when leaving sidebar
         sidebar.addEventListener("mouseleave", () => {
             sidebar.classList.remove("expanded");
         });

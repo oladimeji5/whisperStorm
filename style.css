@@ -64,32 +64,44 @@ nav a.active {
 /* ========== SIDEBAR ========== */
 /* Default sidebar (collapsed) */
 /* Sidebar hidden by default */
+/* Default sidebar (collapsed) */
 .sidebar {
-    width: 200px;
-    background: #1a1f36;
+    width: 60px;
+    /* collapsed width */
+    background: #08154e;
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 15px 8px;
     position: fixed;
-    top: 90px;       /* below header */
-    bottom: 35px;    /* above footer */
-    left: -200px;    /* fully hidden */
+    top: 90px;
+    /* below header */
+    bottom: 35px;
+    /* above footer */
+    left: 0;
     overflow-y: auto;
-    transition: left 0.3s ease;
+    transition: width 0.3s ease;
+    white-space: nowrap;
     z-index: 1000;
 }
 
-/* Expanded (visible) state */
+/* Expanded state */
 .sidebar.expanded {
-    left: 0;
+    width: 200px;
+    padding: 15px;
 }
 
 /* Sidebar heading */
 .sidebar h2 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
-    color: #00d084;
+    color: #16047a;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar.expanded h2 {
+    opacity: 1;
 }
 
 /* Sidebar links */
@@ -103,12 +115,37 @@ nav a.active {
     align-items: center;
     gap: 8px;
     transition: background 0.3s, color 0.3s;
+    overflow: hidden;
 }
 
-.sidebar a:hover {
-    background: #00d084;
-    color: #1a1f36;
+/* Show only icons when collapsed */
+.sidebar a span {
+    display: none;
+    transition: opacity 0.3s;
 }
+
+.sidebar.expanded a span {
+    display: inline;
+    opacity: 1;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+    background: #03084d;
+    color: #e8eaf0;
+}
+
+/* Main content shifts when sidebar expands */
+.main {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.expanded~.main {
+    margin-left: 200px;
+}
+
 
 /* Main content (doesn’t shift) */
 .main {
@@ -120,7 +157,7 @@ nav a.active {
 .sidebar h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #00d084;
+    color: #0031d0;
 }
 
 .sidebar a {
@@ -134,8 +171,8 @@ nav a.active {
 
 .sidebar a:hover,
 .sidebar a.active {
-    background: #00d084;
-    color: #1a1f36;
+    background: #0e00d0;
+    color: #f2f2f5;
 }
 
 /* ========== MAIN ========== */
