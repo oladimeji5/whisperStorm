@@ -25,14 +25,17 @@
         </nav>
     </header>
     <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <h2>MSNR Traders</h2>
-        <a href="#dashboard">📘 Live Training</a>
-        <a href="#dashboard">📊 Market Insights</a>
-        <a href="#dashboard">👥 Community</a>
-        <a href="#contact">📞 Contact</a>
-        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank">💬 Join WhatsApp</a>
-    </aside>
+    <div class="sidebar">
+        <h2>WhisperStorm</h2>
+        <a href="#dashboard">📊 <span>Dashboard</span></a>
+        <a href="#about">ℹ️ <span>About</span></a>
+        <a href="#training">🎥 <span>Live Training</span></a>
+        <a href="#contact">📞 <span>Contact</span></a>
+        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank">
+            💬 <span>Join WhatsApp</span>
+        </a>
+    </div>
+
 
     <!-- MAIN -->
     <main class="main">
@@ -115,6 +118,19 @@
 
     <!-- SCRIPT -->
     <script>
+        const sidebar = document.querySelector(".sidebar");
+
+        // Expand when cursor touches left edge
+        document.addEventListener("mousemove", (e) => {
+            if (e.clientX < 20) {
+                sidebar.classList.add("expanded");
+            }
+        });
+
+        // Hide again when mouse leaves sidebar
+        sidebar.addEventListener("mouseleave", () => {
+            sidebar.classList.remove("expanded");
+        });
         const links = document.querySelectorAll("nav a, .sidebar a[href^='#']");
         const sections = document.querySelectorAll("main section");
 
