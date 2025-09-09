@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSNR Traders - Forex Training</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSNR Traders</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
         <div class="logo">
-            <img src="whisper.png" alt="MSNR Traders Logo">
-            <span class="brand">MSNR TRADERS</span>
+            <img src="whisper.png" alt="MSNR Traders Logo" />
+            <h1 class="brand">WHISPERSTORM MSNR ELITE TRADERS</h1>
         </div>
         <nav>
             <ul>
@@ -25,98 +25,123 @@
         </nav>
     </header>
 
-    <!-- Sidebar -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
         <h2>MSNR Traders</h2>
-        <a href="#training">📘 Live Training</a>
-        <a href="#insight">📊 Market Insights</a>
-        <a href="#community">👥 Community</a>
-        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank">💬 WhatsApp Group</a>
-        <a href="#tools">🛠 Tools</a>
+        <a href="#dashboard">📘 Live Training</a>
+        <a href="#dashboard">📊 Market Insights</a>
+        <a href="#dashboard">👥 Community</a>
         <a href="#contact">📞 Contact</a>
+        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank">💬 Join WhatsApp</a>
     </aside>
 
-    <!-- Main Content -->
+    <!-- MAIN -->
     <main class="main">
 
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="active">
-            <h2>Dashboard</h2>
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="active" aria-labelledby="dashboard-title">
+            <h2 id="dashboard-title">Welcome to MSNR Traders Dashboard</h2>
             <div class="card-container">
 
                 <!-- Live Training -->
-                <div class="card gallery-item" id="training">
-                    <img src="pics.jpg" alt="Live Training">
+                <article class="card gallery-item">
+                    <img src="pics.jpg" alt="Live Training" />
                     <div class="overlay">
                         <h3>Live Training</h3>
-                        <p>Join real-time trading classes and sharpen your skills.</p>
+                        <p>Join our interactive forex trading sessions in real-time.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Market Insights -->
-                <div class="card gallery-item" id="insight">
-                    <img src="pics 1.jpg" alt="Market Insights">
+                <article class="card gallery-item">
+                    <img src="pics 1.jpg" alt="Market Insights" />
                     <div class="overlay">
-                        <h3>Market Insights</h3>
-                        <p>Stay updated with daily trading signals and analysis.</p>
+                        <h3>Market Insight</h3>
+                        <p>Daily analysis and trade setups from Elite Traders.</p>
                     </div>
-                </div>
+                </article>
 
                 <!-- Community Support -->
-                <div class="card gallery-item" id="community">
-                    <img src="pics 2.jpg" alt="Community Support">
+                <article class="card gallery-item">
+                    <img src="pics 2.jpg" alt="Community Support" />
                     <div class="overlay">
                         <h3>Community Support</h3>
                         <p>Connect, share, and learn with traders worldwide.</p>
-                        <a href="https://chat.whatsapp.com/HddBx4AU3YbIHSUsDaemys?mode=ems_copy_c" target="_blank"
-                            class="whatsapp-btn">
-                            💬 Join WhatsApp Group
-                        </a>
+
                     </div>
-                </div>
+                </article>
 
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Us</h2>
+        <!-- ABOUT -->
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About MSNR Traders</h2>
             <p>
-                At MSNR Traders, we empower individuals with the skills and confidence to trade forex successfully.
-                Through live training, insightful market analysis, and strong community support,
-                we provide a platform for traders to grow, connect, and succeed together.
+                MSNR Traders is a professional online forex training platform designed to empower traders
+                with live market insights, interactive training, and a supportive community. We provide
+                tools, mentorship, and real-time strategies to help traders achieve consistent success.
             </p>
-            <img src="about.jpg" alt="About MSNR Traders">
+            <img src="whisper.png" alt="MSNR Profile" class="about-img" />
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <div class="contact">
-                <h2>Contact Us</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="Your message here..."></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
+        <!-- CONTACT -->
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Us</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 MSNR Traders. All Rights Reserved.</p>
+        <p>&copy; 2025 MSNR TRADERS. All rights reserved.</p>
     </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const links = document.querySelectorAll("nav a, .sidebar a[href^='#']");
+        const sections = document.querySelectorAll("main section");
+
+        function activate(targetId) {
+            sections.forEach(sec => sec.classList.remove("active"));
+            links.forEach(link => link.classList.remove("active"));
+            const target = document.querySelector(targetId);
+            if (target) target.classList.add("active");
+            document.querySelectorAll("a[href='" + targetId + "']").forEach(a => a.classList.add("active"));
+        }
+
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href");
+                if (targetId.startsWith("#")) {
+                    activate(targetId);
+                }
+            });
+        });
+
+        // Load section from URL hash
+        window.addEventListener("load", () => {
+            const hash = window.location.hash || "#dashboard";
+            activate(hash);
+        });
+    </script>
 
 </body>
 

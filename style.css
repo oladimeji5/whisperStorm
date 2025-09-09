@@ -1,273 +1,5 @@
 /* ========== RESET ========== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    line-height: 1.6;
-}
-
-/* ========== HEADER & NAVBAR ========== */
-header {
-    background: #004080;
-    color: #fff;
-    padding: 15px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-}
-
-.brand {
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover,
-nav a.active {
-    color: #ffd700;
-}
-
-/* ========== SIDEBAR ========== */
-aside.sidebar {
-    width: 220px;
-    background: #1a1f36;
-    color: #eee;
-    padding: 25px 15px;
-    position: fixed;
-    top: 80px;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #00d084;
-    font-size: 20px;
-}
-
-.sidebar a {
-    display: block;
-    text-decoration: none;
-    color: #ddd;
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    transition: all 0.3s;
-}
-
-.sidebar a:hover {
-    background: #00d084;
-    color: #1a1f36;
-}
-
-/* ========== MAIN ========== */
-main {
-    margin-left: 240px;
-    padding: 25px;
-    flex: 1;
-}
-
-main h2 {
-    margin-bottom: 20px;
-    color: #004080;
-    font-size: 1.8rem;
-}
-
-/* ========== DASHBOARD CARDS ========== */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery-item:hover {
-    transform: translateY(-6px);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 64, 128, 0.88);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.4s ease;
-}
-
-.overlay h3 {
-    margin-bottom: 10px;
-    color: #ffd700;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ========== ABOUT SECTION ========== */
-#about {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-#about h2 {
-    color: #004080;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#about p {
-    max-width: 700px;
-    margin: 0 auto 20px auto;
-    font-size: 18px;
-}
-
-#about img {
-    width: 240px;
-    border-radius: 20px;
-    margin-top: 25px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-/* ========== CONTACT SECTION ========== */
-.contact {
-    max-width: 650px;
-    margin: auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
-}
-
-.contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #004080;
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #004080;
-    outline: none;
-}
-
-.btn {
-    background: #ffd700;
-    border: none;
-    padding: 14px;
-    width: 100%;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #e6c200;
-}
-
-/* ========== FOOTER ========== */
-footer {
-    background: #004080;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    margin-top: auto;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-}
-
-/* ========== SECTIONS VISIBILITY ========== */
-section {
-    display: none;
-    animation: fadeIn 0.6s ease;
-}
-
-/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -283,10 +15,10 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
+/* ========== HEADER ========== */
 header {
     background: #004080;
-    color: #fdfb08;
+    color: #fff;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -308,13 +40,13 @@ header {
 .brand {
     font-size: 16px;
     font-weight: bold;
-    color: #fff;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+
 }
 
 nav a {
@@ -329,7 +61,7 @@ nav a.active {
     color: #ffd700;
 }
 
-/* Sidebar */
+/* ========== SIDEBAR ========== */
 .sidebar {
     width: 220px;
     background: #1a1f36;
@@ -341,6 +73,7 @@ nav a.active {
     top: 80px;
     bottom: 0;
     left: 0;
+    overflow-y: auto;
 }
 
 .sidebar h2 {
@@ -355,15 +88,16 @@ nav a.active {
     padding: 12px;
     border-radius: 8px;
     margin-bottom: 10px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
-.sidebar a:hover {
+.sidebar a:hover,
+.sidebar a.active {
     background: #00d084;
     color: #1a1f36;
 }
 
-/* Main */
+/* ========== MAIN ========== */
 .main {
     margin-left: 240px;
     padding: 20px;
@@ -375,7 +109,7 @@ nav a.active {
     color: #004080;
 }
 
-/* Dashboard Cards with Images */
+/* ========== DASHBOARD CARDS ========== */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -396,7 +130,7 @@ nav a.active {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.4s;
+    transition: transform 0.4s ease;
 }
 
 .gallery-item:hover img {
@@ -414,7 +148,7 @@ nav a.active {
     padding: 20px;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.4s;
+    transition: all 0.4s ease;
 }
 
 .overlay h3 {
@@ -427,28 +161,9 @@ nav a.active {
     transform: translateY(0);
 }
 
-/* WhatsApp Button */
-.whatsapp-btn {
-    display: inline-block;
-    background: #25D366;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.whatsapp-btn:hover {
-    background: #1ebe5b;
-}
-
-/* About Section */
+/* ========== ABOUT ========== */
 #about {
     text-align: center;
-    padding: 40px 20px;
 }
 
 #about h2 {
@@ -464,15 +179,15 @@ nav a.active {
     font-size: 18px;
 }
 
-#about img {
+.about-img {
     width: 220px;
     border-radius: 20px;
     margin-top: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact */
-.contact {
+/* ========== CONTACT ========== */
+.contact-form {
     max-width: 600px;
     margin: auto;
     background: white;
@@ -481,7 +196,7 @@ nav a.active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.contact h2 {
+.contact-form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #004080;
@@ -527,7 +242,7 @@ nav a.active {
     background: #e6c200;
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
 footer {
     background: #004080;
     color: white;
@@ -536,28 +251,11 @@ footer {
     margin-top: auto;
 }
 
-/* Sections */
+/* ========== SECTIONS VISIBILITY ========== */
 section {
     display: none;
 }
 
 section.active {
     display: block;
-}
-
-section.active {
-    display: block;
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
