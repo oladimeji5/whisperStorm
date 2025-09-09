@@ -64,7 +64,6 @@ nav a.active {
 /* ========== SIDEBAR ========== */
 .sidebar {
     width: 200px;
-    height: fit-content;
     background: #1a1f36;
     color: white;
     display: flex;
@@ -72,7 +71,7 @@ nav a.active {
     padding: 15px;
     position: fixed;
     top: 90px;
-    bottom: 0;
+    bottom: 35px;
     left: 0;
     overflow-y: auto;
 }
@@ -245,7 +244,7 @@ nav a.active {
 
 /* ========== FOOTER ========== */
 footer {
-    background: #004080;
+    background: #1a1f36;
     color: white;
     text-align: center;
     padding: 10px;
