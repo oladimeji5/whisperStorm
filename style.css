@@ -19,7 +19,7 @@ body {
 header {
     background: #004080;
     color: #fff;
-    padding: 15px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +68,7 @@ nav a.active {
 .sidebar {
     width: 60px;
     /* collapsed width */
-    background: #08154e;
+    background: #121730;
     color: white;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ nav a.active {
 .sidebar h2 {
     font-size: 14px;
     margin-bottom: 20px;
-    color: #16047a;
+    color: #f5f5f7;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -157,7 +157,7 @@ nav a.active {
 .sidebar h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #0031d0;
+    color: #f1cf0b;
 }
 
 .sidebar a {
