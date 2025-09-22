@@ -108,6 +108,34 @@ main {
   margin-bottom: 5px;
 }
 
+/* ===== Live Training Page ===== */
+.training-content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.training-content img {
+  width: 280px;
+  height: 200px;
+  border-radius: 0%;
+  object-fit: cover;
+  border: 3px solid #1b263b;
+  margin-bottom: 50px;
+}
+
+.training-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #010875;
+}
+
+.training-content p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 2.6;
+  color: #c40707;
+}
+
 /* ===== About Page ===== */
 #about {
   text-align: center;
@@ -205,7 +233,8 @@ footer {
     height: 150px;
   }
 
-  .about-img {
+  .about-img,
+  .training-content img {
     width: 120px;
     height: 120px;
   }
